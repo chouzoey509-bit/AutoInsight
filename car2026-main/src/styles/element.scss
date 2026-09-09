@@ -1,0 +1,234 @@
+/* ==========================================================================
+   Element Plus 主题适配
+   在官方 dark 变量基础上对齐 AutoInsight Design Token
+   ========================================================================== */
+
+html.dark {
+  /* 主色对齐科技蓝 */
+  --el-color-primary: var(--ai-brand);
+  --el-color-primary-light-3: #4a8ff8;
+  --el-color-primary-light-5: #2e7cf6;
+  --el-color-primary-light-7: #1d4f96;
+  --el-color-primary-light-8: #173d75;
+  --el-color-primary-light-9: #122c53;
+  --el-color-primary-dark-2: #246ade;
+
+  --el-color-success: var(--ai-nev);
+  --el-color-warning: var(--ai-warn);
+  --el-color-danger: var(--ai-danger);
+  --el-color-error: var(--ai-danger);
+  --el-color-info: var(--ai-text-3);
+
+  /* 背景层次 */
+  --el-bg-color: var(--ai-bg-panel);
+  --el-bg-color-page: var(--ai-bg-page);
+  --el-bg-color-overlay: var(--ai-bg-elevated);
+  --el-fill-color: rgba(255, 255, 255, 0.05);
+  --el-fill-color-light: rgba(255, 255, 255, 0.06);
+  --el-fill-color-lighter: rgba(255, 255, 255, 0.04);
+  --el-fill-color-blank: var(--ai-bg-panel);
+  --el-fill-color-dark: rgba(255, 255, 255, 0.09);
+  --el-fill-color-darker: rgba(255, 255, 255, 0.13);
+
+  /* 文本 */
+  --el-text-color-primary: var(--ai-text-1);
+  --el-text-color-regular: var(--ai-text-2);
+  --el-text-color-secondary: var(--ai-text-3);
+  --el-text-color-placeholder: var(--ai-text-4);
+  --el-text-color-disabled: var(--ai-text-4);
+
+  /* 边框 */
+  --el-border-color: var(--ai-border);
+  --el-border-color-light: var(--ai-border);
+  --el-border-color-lighter: var(--ai-border);
+  --el-border-color-extra-light: var(--ai-border);
+  --el-border-color-hover: var(--ai-border-strong);
+  --el-border-radius-base: var(--ai-radius-sm);
+  --el-border-radius-small: var(--ai-radius-xs);
+
+  /* 遮罩 */
+  --el-overlay-color-lighter: var(--ai-bg-mask);
+  --el-mask-color: var(--ai-bg-mask);
+
+  /* 阴影 */
+  --el-box-shadow: var(--ai-shadow-md);
+  --el-box-shadow-light: var(--ai-shadow-md);
+  --el-box-shadow-lighter: var(--ai-shadow-sm);
+
+  --el-font-family: var(--ai-font-sans);
+  --el-font-size-base: var(--ai-fs-body);
+
+  /* ---------- 组件细节 ---------- */
+
+  .el-card {
+    background: var(--ai-bg-panel);
+    border: 1px solid var(--ai-border);
+    box-shadow: var(--ai-shadow-sm);
+  }
+
+  .el-button {
+    font-weight: var(--ai-fw-medium);
+    transition: all var(--ai-duration-base) var(--ai-ease);
+  }
+
+  .el-button--primary {
+    box-shadow: 0 2px 10px rgba(46, 124, 246, 0.18);
+  }
+
+  .el-button--text:not(.is-disabled):hover {
+    color: var(--ai-brand-hover);
+  }
+
+  /* 表格：企业数据管理观感 —— 细线、低对比表头 */
+  .el-table {
+    --el-table-border-color: var(--ai-border);
+    --el-table-header-bg-color: rgba(255, 255, 255, 0.028);
+    --el-table-row-hover-bg-color: rgba(255, 255, 255, 0.035);
+    --el-table-text-color: var(--ai-text-2);
+    --el-table-header-text-color: var(--ai-text-3);
+    background: transparent;
+    font-size: var(--ai-fs-sm);
+  }
+
+  .el-table__inner-wrapper::before,
+  .el-table::before {
+    background-color: var(--ai-border);
+  }
+
+  .el-table th.el-table__cell {
+    font-weight: var(--ai-fw-medium);
+    letter-spacing: 0.02em;
+    font-size: var(--ai-fs-xs);
+  }
+
+  .el-table td.el-table__cell {
+    color: var(--ai-text-1);
+  }
+
+  .el-table__empty-text {
+    color: var(--ai-text-3);
+    font-size: var(--ai-fs-xs);
+  }
+
+  /* 表单控件 */
+  .el-input__wrapper,
+  .el-select__wrapper,
+  .el-textarea__inner {
+    background-color: rgba(255, 255, 255, 0.03);
+    box-shadow: 0 0 0 1px var(--ai-border) inset;
+    transition: box-shadow var(--ai-duration-base) var(--ai-ease);
+  }
+
+  .el-input__wrapper:hover,
+  .el-select__wrapper:hover {
+    box-shadow: 0 0 0 1px var(--ai-border-strong) inset;
+  }
+
+  .el-input__wrapper.is-focus,
+  .el-select__wrapper.is-focused {
+    box-shadow: 0 0 0 1px var(--ai-brand) inset;
+  }
+
+  /* 弹层 */
+  .el-dialog {
+    background: var(--ai-bg-elevated);
+    border: 1px solid var(--ai-border);
+    border-radius: var(--ai-radius-lg);
+    box-shadow: var(--ai-shadow-lg);
+  }
+
+  .el-dialog__header { border-bottom: 1px solid var(--ai-border); margin-right: 0; padding: 16px 20px; }
+  .el-dialog__title { font-size: var(--ai-fs-h3); font-weight: var(--ai-fw-semibold); }
+  .el-dialog__footer { border-top: 1px solid var(--ai-border); padding: 14px 20px; }
+
+  .el-popper.is-light,
+  .el-popper.is-dark {
+    background: var(--ai-bg-elevated);
+    border: 1px solid var(--ai-border);
+  }
+
+  .el-dropdown-menu {
+    background: var(--ai-bg-elevated);
+    border: 1px solid var(--ai-border);
+    box-shadow: var(--ai-shadow-md);
+  }
+
+  .el-dropdown-menu__item:not(.is-disabled):hover {
+    background: var(--ai-bg-hover);
+    color: var(--ai-text-1);
+  }
+
+  /* 分页 */
+  .el-pagination {
+    --el-pagination-bg-color: transparent;
+    --el-pagination-button-bg-color: rgba(255, 255, 255, 0.03);
+    --el-pagination-hover-color: var(--ai-brand);
+    font-weight: var(--ai-fw-normal);
+  }
+
+  /* 标签 */
+  .el-tag {
+    border-radius: var(--ai-radius-xs);
+    font-weight: var(--ai-fw-normal);
+  }
+
+  /* 菜单 */
+  .el-menu {
+    border-right: 0;
+    background: transparent;
+  }
+
+  .el-menu-item,
+  .el-sub-menu__title {
+    height: 42px;
+    line-height: 42px;
+    border-radius: var(--ai-radius-sm);
+    color: var(--ai-text-2);
+    font-size: var(--ai-fs-sm);
+  }
+
+  .el-menu-item.is-active {
+    background: var(--ai-brand-ghost);
+    color: #9cc0ff;
+    font-weight: var(--ai-fw-medium);
+  }
+
+  .el-menu-item.is-active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 18px;
+    border-radius: 0 2px 2px 0;
+    background: var(--ai-brand);
+  }
+
+  /* 进度条 */
+  .el-progress-bar__outer { background: rgba(255, 255, 255, 0.07); }
+
+  /* 消息 */
+  .el-message {
+    border-radius: var(--ai-radius-sm);
+    background: var(--ai-bg-elevated);
+    border: 1px solid var(--ai-border);
+    box-shadow: var(--ai-shadow-md);
+  }
+
+  /* 描述列表 */
+  .el-descriptions {
+    --el-descriptions-item-bordered-label-background: rgba(255, 255, 255, 0.028);
+  }
+
+  /* 上传 */
+  .el-upload-dragger {
+    background: rgba(255, 255, 255, 0.02);
+    border-color: var(--ai-border-dashed);
+  }
+  .el-upload-dragger:hover { border-color: var(--ai-brand); }
+
+  /* 滑块 / 单选按钮 */
+  .el-slider__runway { background: rgba(255, 255, 255, 0.08); }
+  .el-radio-button__inner { background: rgba(255, 255, 255, 0.03); }
+}

@@ -1,0 +1,119 @@
+/* ==========================================================================
+   AutoInsight UI V2 Design Tokens
+   视觉基调：黑白极简 + 编辑杂志感 + 数据平台
+   ========================================================================== */
+
+:root {
+  --ai-bg-base: #f7f7f5;
+  --ai-bg-page: #f7f7f5;
+  --ai-bg-panel: #ffffff;
+  --ai-bg-elevated: #ffffff;
+  --ai-bg-hover: #f1f1ef;
+  --ai-bg-active: #e9e9e6;
+  --ai-bg-subtle: #f7f7f5;
+  --ai-bg-mask: rgba(17, 17, 17, 0.72);
+
+  --ai-border: #e5e5e2;
+  --ai-border-strong: #cfcfcb;
+  --ai-border-brand: #111111;
+  --ai-border-dashed: #c9c9c5;
+
+  --ai-text-1: #111111;
+  --ai-text-2: #3f3f3c;
+  --ai-text-3: #73736f;
+  --ai-text-4: #9a9a94;
+  --ai-text-inverse: #ffffff;
+
+  --ai-brand: #111111;
+  --ai-brand-hover: #2b2b29;
+  --ai-brand-active: #000000;
+  --ai-brand-soft: #ededeb;
+  --ai-brand-ghost: #f1f1ef;
+
+  --ai-nev: #5b5b57;
+  --ai-nev-soft: #eeeeeb;
+  --ai-warn: #6a6250;
+  --ai-warn-soft: #f2efe8;
+  --ai-danger: #5d4646;
+  --ai-danger-soft: #f2eaea;
+  --ai-info: #595954;
+  --ai-purple: #5f5a63;
+  --ai-cyan: #596360;
+
+  --ai-chart-1: #111111;
+  --ai-chart-2: #5f5f5b;
+  --ai-chart-3: #85857f;
+  --ai-chart-4: #a3a39d;
+  --ai-chart-5: #c2c2bc;
+  --ai-chart-6: #444440;
+  --ai-chart-7: #70706b;
+  --ai-chart-8: #9b9b95;
+  --ai-chart-axis: #d7d7d3;
+  --ai-chart-split: #ecece9;
+  --ai-chart-label: #7a7a75;
+
+  --ai-up: #3f3f3a;
+  --ai-down: #64645f;
+
+  --ai-radius-xs: 0px;
+  --ai-radius-sm: 2px;
+  --ai-radius-md: 2px;
+  --ai-radius-lg: 2px;
+  --ai-radius-xl: 2px;
+  --ai-radius-pill: 999px;
+
+  --ai-space-1: 4px;
+  --ai-space-2: 8px;
+  --ai-space-3: 12px;
+  --ai-space-4: 16px;
+  --ai-space-5: 20px;
+  --ai-space-6: 24px;
+  --ai-space-8: 32px;
+  --ai-space-10: 40px;
+  --ai-space-12: 48px;
+
+  --ai-shadow-sm: none;
+  --ai-shadow-md: 0 10px 30px rgba(17, 17, 17, 0.06);
+  --ai-shadow-lg: 0 20px 60px rgba(17, 17, 17, 0.08);
+  --ai-shadow-inset: none;
+  --ai-shadow-glow: none;
+
+  --ai-font-sans: Inter, 'PingFang SC', 'Microsoft YaHei', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --ai-font-mono: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
+
+  --ai-fs-display: 44px;
+  --ai-fs-h1: 28px;
+  --ai-fs-h2: 20px;
+  --ai-fs-h3: 15px;
+  --ai-fs-body: 14px;
+  --ai-fs-sm: 13px;
+  --ai-fs-xs: 12px;
+  --ai-fs-mini: 10px;
+
+  --ai-fw-normal: 400;
+  --ai-fw-medium: 500;
+  --ai-fw-semibold: 600;
+  --ai-fw-bold: 700;
+
+  --ai-lh-tight: 1.2;
+  --ai-lh-normal: 1.5;
+  --ai-lh-loose: 1.75;
+
+  --ai-header-height: 72px;
+  --ai-sidebar-width: 88px;
+  --ai-sidebar-collapsed: 72px;
+  --ai-content-max: 1440px;
+
+  --ai-duration-fast: 120ms;
+  --ai-duration-base: 180ms;
+  --ai-duration-slow: 280ms;
+  --ai-ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --ai-z-base: 1;
+  --ai-z-sticky: 100;
+  --ai-z-header: 200;
+  --ai-z-sidebar: 300;
+  --ai-z-overlay: 400;
+  --ai-z-modal: 500;
+  --ai-z-toast: 600;
+}

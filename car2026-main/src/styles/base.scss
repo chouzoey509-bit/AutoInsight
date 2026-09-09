@@ -1,0 +1,171 @@
+/* ==========================================================================
+   基础重置 + 排版 + 通用工具类
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  min-height: 100%;
+  width: 100%;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  min-width: 0;
+  background: var(--ai-bg-base);
+  color: var(--ai-text-1);
+  font-family: var(--ai-font-sans);
+  font-size: var(--ai-fs-body);
+  line-height: var(--ai-lh-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6, p, figure {
+  margin: 0;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* 数据使用等宽数字，避免跳动 */
+.ai-num,
+.tabular {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum' 1;
+  font-family: var(--ai-font-mono);
+  letter-spacing: -0.01em;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--ai-radius-pill);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+::selection {
+  background: rgba(46, 124, 246, 0.32);
+  color: #fff;
+}
+
+@keyframes ai-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes ai-fade-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes ai-pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
+}
+
+.fade-up-enter-active { animation: ai-fade-up var(--ai-duration-slow) var(--ai-ease) both; }
+.fade-up-leave-active { animation: ai-fade-in var(--ai-duration-fast) var(--ai-ease) reverse both; }
+.fade-enter-active { animation: ai-fade-in var(--ai-duration-base) var(--ai-ease) both; }
+.fade-leave-active { animation: ai-fade-in var(--ai-duration-fast) var(--ai-ease) reverse both; }
+
+.ai-row { display: flex; align-items: center; }
+.ai-row--between { justify-content: space-between; }
+.ai-row--gap-2 { gap: var(--ai-space-2); }
+.ai-row--gap-3 { gap: var(--ai-space-3); }
+.ai-row--gap-4 { gap: var(--ai-space-4); }
+
+.ai-grid { display: grid; gap: var(--ai-space-4); }
+
+.ai-text-1 { color: var(--ai-text-1); }
+.ai-text-2 { color: var(--ai-text-2); }
+.ai-text-3 { color: var(--ai-text-3); }
+.ai-up { color: var(--ai-up); }
+.ai-down { color: var(--ai-down); }
+
+.ai-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ai-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.ai-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ai-space-5);
+  padding: var(--ai-space-5) var(--ai-space-6) var(--ai-space-10);
+  max-width: var(--ai-content-max);
+  width: 100%;
+  min-width: 0;
+  margin: 0 auto;
+  animation: ai-fade-up var(--ai-duration-slow) var(--ai-ease) both;
+}
+
+.ai-section-title {
+  font-size: var(--ai-fs-h3);
+  font-weight: var(--ai-fw-semibold);
+  color: var(--ai-text-1);
+  letter-spacing: 0.01em;
+}
+
+.ai-divider {
+  height: 1px;
+  background: var(--ai-border);
+  border: 0;
+  margin: 0;
+}
+
+@media (max-width: 1280px) {
+  .ai-page { padding: var(--ai-space-4) var(--ai-space-5) var(--ai-space-8); }
+}
+
+@media (max-width: 992px) {
+  .ai-page { padding: var(--ai-space-4); gap: var(--ai-space-4); }
+}
+
+@media (max-width: 768px) {
+  .ai-page { padding: var(--ai-space-3); gap: var(--ai-space-3); }
+}

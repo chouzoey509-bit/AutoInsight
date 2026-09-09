@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AutoInsight 汽车行业数据智能分析与决策平台" />
+    <title>AutoInsight · 汽车行业数据智能分析与决策平台</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="app-boot">
+        <div class="app-boot__mark">AI</div>
+        <div class="app-boot__text">AutoInsight 正在初始化数据驾驶舱…</div>
+      </div>
+    </div>
+    <script type="module" src="/src/main"></script>
+    <style>
+      html.dark { color-scheme: dark; }
+      body { margin: 0; background: #0b0f16; }
+      .app-boot {
+        height: 100vh; display: flex; flex-direction: column;
+        align-items: center; justify-content: center; gap: 18px;
+        color: #93a2b8; font-family: system-ui, -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      }
+      .app-boot__mark {
+        width: 46px; height: 46px; border-radius: 10px; display: grid; place-items: center;
+        background: linear-gradient(135deg, #2e7cf6, #16c79a); color: #fff; font-weight: 700; letter-spacing: 1px;
+        box-shadow: 0 10px 30px rgba(46, 124, 246, .28);
+      }
+      .app-boot__text { font-size: 13px; letter-spacing: .06em; }
+    </style>
+  </body>
+</html>
